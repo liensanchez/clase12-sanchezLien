@@ -13,9 +13,18 @@ $("#registrarse").on('click',function(){
                           <button type="sumbit" id="botonRegistro">Registrarse!</button>
                         </form>
   `)
-  
+
+  //removemos el icono de usuarios
+  $(".fas").remove();
+
+  //agregamos icon de usuario registrandose
+  $("#loginIcon").append(`
+                        <i class="fas fa-user-plus"></i>
+  `); 
+
   //retiramos el boton de registrarse
   $("#registrarse").remove();
+
   //detectamos el click en el boton
   $("#botonRegistro").on('click', function(event){
 

@@ -255,6 +255,10 @@ form{
 @media only screen and (min-width:1024px) 
 {
 /*==============================================HEADER==============================================================================*/
+  .fas{
+    color: beige;
+    font-size: 60px;
+  }
   .logo{
     background-color: white;
     width: 212px;

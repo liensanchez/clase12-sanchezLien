@@ -5,6 +5,14 @@ $(document).ready(function()
 //registro de un nuevo cliente
 $("#registrarse").on('click',function(){
   
+  //removemos el icono de usuarios
+  $(".fas").remove();
+  
+  //agregamos icon de usuario registrandose
+  $("#loginIcon").append(`
+                        <i class="fas fa-user-plus"></i>
+  `); 
+
   //creamos y editamos el HTML
   $("#loginBox").append(`<form>
                           <input placeholder="nombre" type="text" id="inputNombre"></input>
@@ -13,14 +21,6 @@ $("#registrarse").on('click',function(){
                           <button type="sumbit" id="botonRegistro">Registrarse!</button>
                         </form>
   `)
-
-  //removemos el icono de usuarios
-  $(".fas").remove();
-
-  //agregamos icon de usuario registrandose
-  $("#loginIcon").append(`
-                        <i class="fas fa-user-plus"></i>
-  `); 
 
   //retiramos el boton de registrarse
   $("#registrarse").remove();
@@ -69,7 +69,7 @@ $("#ingresar").on('click', function(){
 
 
     if ((nombre == localStorage.nombre)&&(telefono == localStorage.telefono)) {
-      alert("Bienvenido "+localStorage.nombre);
+      $("#loginBox");
     }
       else if (nombre != localStorage.nombre){
         alert("Usted no se registro correctamente");

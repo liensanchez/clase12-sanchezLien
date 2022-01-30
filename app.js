@@ -2,6 +2,8 @@ $(document).ready(function()
 {
   console.log("domready")
 });
+
+
 //registro de un nuevo cliente
 $("#registrarse").on('click',function(){
   
@@ -21,7 +23,7 @@ $("#registrarse").on('click',function(){
                           <button type="sumbit" id="botonRegistro">Registrarse!</button>
                         </form>
   `)
-
+  
   //retiramos el boton de registrarse
   $("#registrarse").remove();
 
@@ -41,9 +43,16 @@ $("#registrarse").on('click',function(){
     localStorage.setItem('apellido', apellido);
     localStorage.setItem('numero', telefono);
 
+    //impedimos el envio en blanco
+    if((nombre==="")&&(apellido==="")){
+      alert ("no ingreso los datos coorespondientes")
+    }else(console.log("registrado"))
+
   })
   
 })
+
+
 
 //ingreso de un cliente
 $("#ingresar").on('click', function(){
@@ -62,52 +71,81 @@ $("#ingresar").on('click', function(){
     event.preventDefault();
 
     //recuperamos datos del form
-    let nombre = $("#inputNombre").val();
+    let nombre = $("#inputNombre").val()
 
+    let telefono = $("#inputNumero").val()
 
 
     //comparamos datos con el local storage 
-    if (nombre ==! localStorage.nombre){
+    if ((nombre == localStorage.getItem('nombre'))&&(telefono== localStorage.getItem('numero'))){
       
-      //aplicamos un icon de ingreso
+      //retiramos icon usuarios
       $(".fas").remove();
 
       //agregamos icon de usuario ingresado
       $("#loginIcon").append(`
-                              <i class="fa-solid fa-user-check"></i>
+                            <i class="fas fa-user-check"></i>
       `); 
 
       //le damos la bienvenida al cliente
       $("#loginBox").append(`
-                            <h2> bienvenido</h2> $('nombre')
-      `)
+                            <h2> bienvenido</h2>` + nombre
+      )
+
       //removemos el ingresar
       $("#ingresar").remove();
 
       //removemos el registrarse
       $("#registrarse").remove();
 
+    }else{
+      
+      //retiramos icon usuarios
+      $(".fas").remove();
+
+      //agregamos icon de error ingresado
+      $("#loginIcon").append(`
+                              <i class="fas fa-user-alt-slash"></i>
+      `); 
+
+      //le informamos al cliente deel error
+      $("#loginBox").append(`
+                            <h2> Error de usuario o numero </h2>`
+      )
     }
     
   })
 })
 
-        
-
-
 
 
 //creacion de usuario cmo objeto
 class Usuario{
+
   constructor(nombre, apellido, numero){
+
     this.nombre = nombre;
+
     this.apellido = apellido;
+
     this.numero = numero;
+
   }
 }
+
+
 //nuevo usuario
 const usuario1 = new Usuario(localStorage.nombre, localStorage.apellido, localStorage.telefono);
 
+
 //array de usuarios
 const listaCliente = [];
+
 listaCliente.push(Usuario);
+
+usuario1.toString();
+
+
+
+
+

@@ -256,9 +256,9 @@ form{
 {
 /*==============================================HEADER==============================================================================*/
   .fas{
-    color: beige;
     font-size: 60px;
   }
+  
   .logo{
     background-color: white;
     width: 212px;
@@ -360,6 +360,7 @@ form{
     justify-content: center;
     align-items: center;
     border: solid 2px white;
+    background-color: white;
     width: 320px;
     height: 380px;
   }

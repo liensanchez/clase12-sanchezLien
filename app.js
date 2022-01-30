@@ -63,24 +63,32 @@ $("#ingresar").on('click', function(){
 
     //recuperamos datos del form
     let nombre = $("#inputNombre").val();
-    let telefono = $("#inputNumero").val();
 
 
 
+    //comparamos datos con el local storage 
+    if (nombre ==! localStorage.nombre){
+      
+      //aplicamos un icon de ingreso
+      $(".fas").remove();
 
-    if ((nombre == localStorage.nombre)&&(telefono == localStorage.telefono)) {
-      $("#loginBox");
+      //agregamos icon de usuario ingresado
+      $("#loginIcon").append(`
+                              <i class="fa-solid fa-user-check"></i>
+      `); 
+
+      //le damos la bienvenida al cliente
+      $("#loginBox").append(`
+                            <h2> bienvenido</h2> $('nombre')
+      `)
+      //removemos el ingresar
+      $("#ingresar").remove();
+
+      //removemos el registrarse
+      $("#registrarse").remove();
+
     }
-      else if (nombre != localStorage.nombre){
-        alert("Usted no se registro correctamente");
-      }
-      else{
-        alert("Usted debe registrarse")
-      }
-    //corroboramos el numero de telefono
-    if (telefono != localStorage.telefono){
-      alert("el numero de telefono no coincide");
-    }
+    
   })
 })
 

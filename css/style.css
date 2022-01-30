@@ -1,0 +1,421 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+background-color: black;
+}
+/*========================VISTA MOBILE=====================================================================*/
+@media only screen and (max-width: 767px)
+{
+/*==============================================HEADER==============================================================================*/
+.logo{
+  background-color: white;
+  width: 40px;
+  height: 25px;
+  margin-left: 17px;
+  margin-top: 18px;
+  border-radius: 50px;
+}
+.separador{
+  position: absolute;
+  width: auto;
+  height: 0px;
+  left: 15px;
+  right: 15px;
+  margin-top: 10px;
+  border:  solid #FA0303;
+  
+}
+.carritoFondo{
+  display: flex;
+  flex-direction: row-reverse;
+  position: absolute;
+  width: 27px;
+  height: 25px;
+  right: 25px;
+  top: 18px;
+  background-color: white;
+  border-radius: 50px;
+}
+.carrito{
+  display: flex;
+  flex-direction: row-reverse;
+  position: absolute;
+  font-size: 15px;
+  top: 5px;
+  right: 7px;
+}
+
+/*==============================================NEGOCIO IMAGENES====================================================================*/
+.negocio{
+  display: flex;
+  flex-direction: row;
+  margin-top: 40px;
+}
+.local{
+  width: auto;
+  height: 245px;
+  margin-left: 1px;
+  margin-right: 1px;
+  padding-right: 2px;
+  overflow: hidden;
+}
+
+/*==============================================PRODUCTOS===========================================================================*/
+.productos{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card {
+  margin-top: 50px;
+  width: 168px;
+  height: 196px;
+  background: rgb(255, 255, 255);
+  border-radius: 0.4em;
+  box-shadow: 0.3em 0.3em 0.7em #00000015;
+  transition: border 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: rgb(250, 250, 250) 0.2em solid;
+  
+ }
+ 
+ .card:hover {
+  border: #006fff 0.2em solid;
+ }
+.img{ 
+  margin-top: 5px;
+  margin-left: 5px;
+  width: 158px;
+  height: 156px;
+  border-radius: 0.4em;
+}
+.img:hover{
+  margin-top: 0px;
+  margin-left: 0px;
+  width: 168px;
+  height: 166px;
+}
+.titulo{
+  display: flex;
+  justify-content: center;
+  font-family: "Londrina Solid";
+}
+/*===============================================LOGIN===============================================================================*/
+.login{
+  display: flex;
+  justify-content: center;
+}
+.loginBox{
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: solid 2px white;
+  width: 320px;
+  height: 380px;
+}
+.boton{
+  width: 80px;
+  height: 20px;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+}
+/*=======================VISTA TABLET=======================================================================*/
+@media only screen and (min-width: 768px) and (max-width: 1023px)
+{
+  /*==============================================HEADER==============================================================================*/
+  .logo{
+    background-color: white;
+    width: 120px;
+    height: 65px;
+    margin-left: 17px;
+    margin-top: 18px;
+    border-radius: 50px;
+  }
+  .separador{
+    position: absolute;
+    width: auto;
+    height: 0px;
+    left: 15px;
+    right: 15px;
+    margin-top: 10px;
+    border:  solid #FA0303;
+    
+  }
+  .carritoFondo{
+    display: flex;
+    flex-direction: row-reverse;
+    position: absolute;
+    width: 68px;
+    height: 65px;
+    right: 25px;
+    top: 18px;
+    background-color: white;
+    border-radius: 50px;
+  }
+  .carrito{
+    display: flex;
+    flex-direction: row-reverse;
+    position: absolute;
+    font-size: 45px;
+    top: 10px;
+    right: 13px;
+  }
+  
+  /*==============================================NEGOCIO IMAGENES====================================================================*/
+  .negocio{
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+  }
+  .local{
+    width: auto;
+    height: 245px;
+    margin-left: 1px;
+    margin-right: 1px;
+    padding-right: 2px;
+    overflow: hidden;
+  }
+  
+  /*==============================================PRODUCTOS===========================================================================*/
+  .productos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .card {
+    margin-top: 50px;
+    width: 168px;
+    height: 196px;
+    background: rgb(255, 255, 255);
+    border-radius: 0.4em;
+    box-shadow: 0.3em 0.3em 0.7em #00000015;
+    transition: border 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: rgb(250, 250, 250) 0.2em solid;
+    
+   }
+   
+   .card:hover {
+    border: #006fff 0.2em solid;
+   }
+  .img{ 
+    margin-top: 5px;
+    margin-left: 5px;
+    width: 158px;
+    height: 156px;
+    border-radius: 0.4em;
+  }
+  .img:hover{
+    margin-top: 0px;
+    margin-left: 0px;
+    width: 168px;
+    height: 166px;
+  }
+  .titulo{
+    display: flex;
+    justify-content: center;
+    font-family: "Londrina Solid";
+  }
+  /*===============================================LOGIN===============================================================================*/
+  .login{
+    display: flex;
+    justify-content: center;
+  }
+  .loginBox{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid 2px white;
+    width: 320px;
+    height: 380px;
+  }
+  .boton{
+    width: 80px;
+    height: 20px;
+  }
+  form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+}
+
+/*=========================VISTA DESKTOP===================================================================*/
+@media only screen and (min-width:1024px) 
+{
+/*==============================================HEADER==============================================================================*/
+  .logo{
+    background-color: white;
+    width: 212px;
+    height: 94px;
+    margin-left: 17px;
+    margin-top: 8px;
+    margin-bottom: 5px;
+    border-radius: 50px;
+  }
+  .separador{
+    position: absolute;
+    width: auto;
+    height: 0px;
+    left: 15px;
+    right: 15px;
+    top: 109px;
+    border:  solid #FA0303;
+    
+  }
+  .carritoFondo{
+    display: flex;
+    flex-direction: row-reverse;
+    position: absolute;
+    width: 69px;
+    height: 64px;
+    right: 22px;
+    top: 8px;
+    background-color: white;
+    border-radius: 50px;
+  }
+  .carrito{
+    display: flex;
+    flex-direction: row-reverse;
+    position: absolute;
+    font-size: 30px;
+    top: 18px;
+    right: 20px;
+  }
+
+  /*==============================================NEGOCIO IMAGENES====================================================================*/
+  .negocio{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+  }
+  .local{
+    height: 754px;
+    width: auto;
+    overflow: hidden;
+  }
+
+  /*==============================================PRODUCTOS===========================================================================*/
+  .productos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .card {
+    margin-top: 50px;
+    width: 268px;
+    height: 296px;
+    background: rgb(255, 255, 255);
+    border-radius: 0.4em;
+    box-shadow: 0.3em 0.3em 0.7em #00000015;
+    transition: border 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: rgb(250, 250, 250) 0.2em solid;
+    
+  }
+  .card:hover {
+    border: #006fff 0.2em solid;
+  }
+  .img{ 
+    margin-top: 5px;
+    margin-left: 5px;
+    width: 258px;
+    height: 256px;
+    border-radius: 0.4em;
+  }
+  .img:hover{
+    margin-top: 0px;
+    margin-left: 0px;
+    width: 268px;
+    height: 266px;
+  }
+  .titulo{
+    display: flex;
+    justify-content: center;
+    font-family: "Londrina Solid";
+  }
+  /*===============================================LOGIN===============================================================================*/
+  .login{
+    display: flex;
+    justify-content: center;
+  }
+  .loginBox{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid 2px white;
+    width: 320px;
+    height: 380px;
+  }
+  .boton{
+    width: 80px;
+    height: 20px;
+  }
+  form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
